@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network Planning | Erik Steven Checo</title>
+    <link rel="stylesheet" href="stevesite.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="hamburger"><i class="fas fa-bars"></i></div>
+            <ul class="nav-links">
+                <li><a href="stevesite.html#about">About</a></li>
+                <li><a href="stevesite.html#experience">Experience</a></li>
+                <li><a href="stevesite.html#projects">Projects</a></li>
+                <li><a href="stevesite.html#skills">Skills</a></li>
+                <li><a href="stevesite.html#certifications">Certifications</a></li>
+                <li><a href="stevesite.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="detail-page">
+        <h1>Network Planning</h1>
+        <p class="subtext">College Project | 2024</p>
+        <div class="content">
+            <p>For this project, I designed detailed network layouts to optimize connectivity and efficiency, creating both physical and logical diagrams tailored to real-world scenarios.</p>
+            <h3>Approach</h3>
+            <ul class="list">
+                <li>Studied network requirements like device placement and traffic flow.</li>
+                <li>Developed physical diagrams showing hardware locations and cabling.</li>
+                <li>Created logical diagrams with IP addressing, subnets, and VLAN configurations.</li>
+                <li>Simulated the design to ensure scalability and performance.</li>
+            </ul>
+            <h3>Tools Used</h3>
+            <p>Cisco Packet Tracer, Visio, Networking Protocols (TCP/IP, VLANs)</p>
+            <h3>Outcome</h3>
+            <p>Produced a blueprint for a high-performing network, ready to support a small campus or office environment.</p>
+            <h3>Network Diagrams</h3>
+            <div class="pdf-buttons">
+                <button class="pdf-btn" onclick="togglePDF('campus')">Architect Network</button>
+                <button class="pdf-btn" onclick="togglePDF('office')">Solar Panel Network</button>
+                <button class="pdf-btn" onclick="togglePDF('home')">Sunshine Network</button>
+            </div>
+            <div id="campus-pdf" class="pdf-viewer">
+                <button class="close-pdf" onclick="togglePDF('campus')">Close</button>
+                <iframe src="C:\Users\Steven\Documents\Steve site\Erik_Checo_arch_project_corrected_the_second.pdf" frameborder="0" loading="lazy"></iframe>
+            </div>
+            <div id="office-pdf" class="pdf-viewer">
+                <button class="close-pdf" onclick="togglePDF('office')">Close</button>
+                <iframe src="C:\Users\Steven\Documents\Steve site\Solar Pannel project Erik Checo and Jakub Slavov.pdf" frameborder="0" loading="lazy"></iframe>
+            </div>
+            <div id="home-pdf" class="pdf-viewer">
+                <button class="close-pdf" onclick="togglePDF('home')">Close</button>
+                <iframe src="C:\Users\Steven\Documents\Steve site\Sunshine_project_erik_check_and_jakub.pdf" frameborder="0" loading="lazy"></iframe>
+            </div>
+        </div>
+        <a href="stevesite.html#projects" class="back-link">Back to Projects</a>
+    </section>
+
+    <footer>
+        <p>© 2025 Erik Steven Checo</p>
+    </footer>
+
+    <script>
+        document.querySelector('.hamburger').addEventListener('click', () => {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+
+        function togglePDF(id) {
+            const viewer = document.getElementById(`${id}-pdf`);
+            if (viewer.style.display === 'block') {
+                viewer.style.display = 'none';
+            } else {
+                // Hide all PDFs first
+                document.querySelectorAll('.pdf-viewer').forEach(v => v.style.display = 'none');
+                // Show the selected one
+                viewer.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>

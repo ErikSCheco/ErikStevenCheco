@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LTSP Thin Client Server | Erik Steven Checo</title>
+    <link rel="stylesheet" href="stevesite.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="hamburger"><i class="fas fa-bars"></i></div>
+            <ul class="nav-links">
+                <li><a href="stevesite.html#about">About</a></li>
+                <li><a href="stevesite.html#experience">Experience</a></li>
+                <li><a href="stevesite.html#projects">Projects</a></li>
+                <li><a href="stevesite.html#skills">Skills</a></li>
+                <li><a href="stevesite.html#certifications">Certifications</a></li>
+                <li><a href="stevesite.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="detail-page">
+        <h1>LTSP Thin Client Server</h1>
+        <p class="subtext">College Project | 2024</p>
+        <div class="content">
+            <p>I set up a Linux Terminal Server Project (LTSP) using Ubuntu 18, turning a single server into a hub for multiple thin clients, perfect for resource-efficient user management.</p>
+            <h3>Approach</h3>
+            <ul class="list">
+                <li>Installed and configured Ubuntu 18 as the server OS.</li>
+                <li>Set up LTSP to distribute resources to lightweight client devices.</li>
+                <li>Managed user accounts and permissions for secure access.</li>
+                <li>Tested performance with multiple simultaneous connections.</li>
+            </ul>
+            <h3>Tools Used</h3>
+            <p>Ubuntu 18, LTSP, Linux Terminal Commands</p>
+            <h3>Outcome</h3>
+            <p>Created a cost-effective, scalable server solution that could support a classroom or small office with minimal hardware.</p>
+            <h3>Project Documentation</h3>
+            <div class="pdf-buttons">
+                <button class="pdf-btn" onclick="togglePDF('ltsp')">View LTSP Setup Guide</button>
+            </div>
+            <div id="ltsp-pdf" class="pdf-viewer">
+                <button class="close-pdf" onclick="togglePDF('ltsp')">Close</button>
+                <iframe src="C:\Users\Steven\Documents\Steve site\LTSP Server and Thin Client Setup.pdf" frameborder="0" loading="lazy"></iframe>
+            </div>
+        </div>
+        <a href="stevesite.html#projects" class="back-link">Back to Projects</a>
+    </section>
+
+    <footer>
+        <p>© 2025 Erik Steven Checo</p>
+    </footer>
+
+    <script>
+        document.querySelector('.hamburger').addEventListener('click', () => {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+
+        function togglePDF(id) {
+            const viewer = document.getElementById(`${id}-pdf`);
+            if (viewer.style.display === 'block') {
+                viewer.style.display = 'none';
+            } else {
+                viewer.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>

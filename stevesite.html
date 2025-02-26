@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Erik Steven Checo - IT Professional</title>
+    <link rel="stylesheet" href="stevesite.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="loader"></div>
+    <header>
+        <nav>
+            <div class="hamburger"><i class="fas fa-bars"></i></div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about" class="hero">
+        <img src="C:\Users\Steven\Documents\Steve site\1714788970131.jpg" alt="Erik Steven Checo" class="profile-img">
+        <h1>Erik Steven Checo</h1>
+        <p class="subtitle">IT Professional delivering technical excellence.</p>
+        <a href="erik-resume.pdf" download class="resume-btn">Download Resume</a>
+    </section>
+
+    <section id="experience">
+        <h2>Experience</h2>
+        <div class="content-grid">
+            <div class="card">
+                <h3><i class="fas fa-desktop"></i> WalkUp Desk Technician</h3>
+                <p class="subtext">University of South Florida | Dec 2024 – Present</p>
+                <p>Supporting students and faculty with fast, hands-on tech solutions.</p>
+                <a href="experience-walkup.html" class="details-link">Learn More</a>
+            </div>
+            <div class="card">
+                <h3><i class="fas fa-baseball-ball"></i> HelpDesk IT Intern</h3>
+                <p class="subtext">Tampa Bay Rays | Apr 2024 – Oct 2024</p>
+                <p>Keeping the team’s tech running smoothly during games and beyond.</p>
+                <a href="experience-rays.html" class="details-link">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="content-grid">
+            <div class="card">
+                <h3><i class="fas fa-share-alt"></i> SharePoint 365 Replacement</h3>
+                <p>Revamped an outdated system into a modern collaboration hub.</p>
+                <a href="project-sharepoint.html" class="details-link">Learn More</a>
+            </div>
+            <div class="card">
+                <h3><i class="fas fa-network-wired"></i> Network Planning</h3>
+                <p>Crafted efficient network layouts for real-world use.</p>
+                <a href="project-network.html" class="details-link">Learn More</a>
+            </div>
+            <div class="card">
+                <h3><i class="fas fa-server"></i> LTSP Thin Client Server</h3>
+                <p>Built a lean server to manage multiple users seamlessly.</p>
+                <a href="project-ltsp.html" class="details-link">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Technical Skills</h2>
+        <div class="content-grid">
+            <div class="card"><h3>Hardware Support</h3><p>Diagnosing & component replacement</p></div>
+            <div class="card"><h3>Networking</h3><p>IP addressing, subnetting, protocols</p></div>
+            <div class="card"><h3>Operating Systems</h3><p>Windows, macOS, Linux</p></div>
+            <div class="card"><h3>Software</h3><p>Microsoft 365, Azure AD</p></div>
+        </div>
+    </section>
+
+    <section id="certifications">
+        <h2>Certifications & Education</h2>
+        <ul class="list">
+            <li><i class="fas fa-certificate"></i> CompTIA Security+, Network+, A+, ESB (2022)</li>
+            <li><i class="fas fa-graduation-cap"></i> Technical Certificate in Computer Systems & IT | Aparicio-Levy Technical College | 2024</li>
+            <li><i class="fas fa-school"></i> High School Diploma | Jule F Sumner High School | 2023</li>
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:erikstevenc@gmail.com">erikstevenc@gmail.com</a> | Phone: (813) 399-7531</p>
+        <form action="https://formspree.io/f/your-form-id" method="POST" class="contact-form">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+        <div class="social-links">
+            <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/yourprofile" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Erik Steven Checo</p>
+    </footer>
+
+    <script>
+        document.querySelector('.hamburger').addEventListener('click', () => {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+        window.addEventListener('load', () => {
+            document.querySelector('.loader').style.opacity = '0';
+            setTimeout(() => document.querySelector('.loader').style.display = 'none', 500);
+        });
+    </script>
+</body>
+</html>
