@@ -17,7 +17,6 @@
                 <li><a href="index.html#experience">Experience</a></li>
                 <li><a href="index.html#projects">Projects</a></li>
                 <li><a href="index.html#skills">Skills</a></li>
-                <li><a href="index.html#certifications">Certifications</a></li>
                 <li><a href="index.html#contact">Contact</a></li>
             </ul>
         </nav>
@@ -41,21 +40,21 @@
             <p>Produced a blueprint for a high-performing network, ready to support a small campus or office environment.</p>
             <h3>Network Diagrams</h3>
             <div class="pdf-buttons">
-                <button class="pdf-btn" onclick="togglePDF('campus')">Architect Network</button>
-                <button class="pdf-btn" onclick="togglePDF('office')">Solar Panel Network</button>
-                <button class="pdf-btn" onclick="togglePDF('home')">Sunshine Network</button>
+                <button class="pdf-btn" onclick="togglePDF('arch')">Arch Project</button>
+                <button class="pdf-btn" onclick="togglePDF('solar')">Solar Panel Project</button>
+                <button class="pdf-btn" onclick="togglePDF('sunshine')">Sunshine Project</button>
             </div>
-            <div id="campus-pdf" class="pdf-viewer">
-                <button class="close-pdf" onclick="togglePDF('campus')">Close</button>
-                <iframe src="C:\Users\Steven\Documents\Steve site\Erik_Checo_arch_project_corrected_the_second.pdf" frameborder="0" loading="lazy"></iframe>
+            <div id="arch-pdf" class="pdf-viewer">
+                <button class="close-pdf" onclick="togglePDF('arch')">Close</button>
+                <iframe src="Erik_Checo_arch_project_corrected_the_second.pdf" frameborder="0" loading="lazy"></iframe>
             </div>
-            <div id="office-pdf" class="pdf-viewer">
-                <button class="close-pdf" onclick="togglePDF('office')">Close</button>
-                <iframe src="C:\Users\Steven\Documents\Steve site\Solar Pannel project Erik Checo and Jakub Slavov.pdf" frameborder="0" loading="lazy"></iframe>
+            <div id="solar-pdf" class="pdf-viewer">
+                <button class="close-pdf" onclick="togglePDF('solar')">Close</button>
+                <iframe src="Solar Pannel project Erik Checo and Jakub Slavov.pdf" frameborder="0" loading="lazy"></iframe>
             </div>
-            <div id="home-pdf" class="pdf-viewer">
-                <button class="close-pdf" onclick="togglePDF('home')">Close</button>
-                <iframe src="C:\Users\Steven\Documents\Steve site\Sunshine_project_erik_check_and_jakub.pdf" frameborder="0" loading="lazy"></iframe>
+            <div id="sunshine-pdf" class="pdf-viewer">
+                <button class="close-pdf" onclick="togglePDF('sunshine')">Close</button>
+                <iframe src="Sunshine_project_erik_check_and_jakub.pdf" frameborder="0" loading="lazy"></iframe>
             </div>
         </div>
         <a href="index.html#projects" class="back-link">Back to Projects</a>
@@ -75,9 +74,7 @@
             if (viewer.style.display === 'block') {
                 viewer.style.display = 'none';
             } else {
-                // Hide all PDFs first
                 document.querySelectorAll('.pdf-viewer').forEach(v => v.style.display = 'none');
-                // Show the selected one
                 viewer.style.display = 'block';
             }
         }
